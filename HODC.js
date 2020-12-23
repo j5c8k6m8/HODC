@@ -83,4 +83,4 @@ $("#start").click(function() {
   start(1)
 });
 $('pre.top').addClass('active');
-}, 200); // prism.jsのマークアップを待受
+}, 1000); // prism.jsのマークアップを待受
