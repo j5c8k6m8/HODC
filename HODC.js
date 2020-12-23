@@ -35,8 +35,8 @@ $('[data-page]').each(function() {
     time: Number($(this).attr('data-time')),
   };
   $(this).find('span.token.string').each(function() {
-    if (/?"$/.test($(this).html())) {
-      $(this).html($(this).html().replace("?", "Am I dead?"))
+    if (/⭕"$/.test($(this).html())) {
+      $(this).html($(this).html().replace("⭕", "Am I dead?"))
       $(this).click(function () {
         const action_id = current_id;
         const s = $(this).html();
@@ -46,11 +46,11 @@ $('[data-page]').each(function() {
             current_zombies.splice(i, 1);
             const $this = $(this);
             $this.attr('data-org-code', $(this).html());
-            $this.html('"??"');
+            $this.html('"🧟"');
             setTimeout(() => {
               if (action_id === current_id) { // 2週目の考慮はしない
-                if ($this.html() === '"??"') {
-                  $this.html('"?"');
+                if ($this.html() === '"🧟"') {
+                  $this.html('"☠"');
                   setTimeout(() => {
                     if (action_id === current_id) { // 2週目の考慮はしない
                       current_num += -1;
@@ -84,4 +84,3 @@ $("#start").click(function() {
 });
 $('pre.top').addClass('active');
 }, 200); // prism.jsのマークアップを待受
-
