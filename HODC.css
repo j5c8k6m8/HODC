@@ -1,0 +1,18 @@
+body {
+  width :320px;
+}
+pre {
+  display: none;
+}
+pre.active {
+  display: block;
+}
+.top,.stage,.dead,.miss,.complete {
+  text-align: center;
+}
+button {
+  margin-top: 18px;
+}
+span {
+  touch-action: manipulation;
+}
